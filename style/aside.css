@@ -1,0 +1,188 @@
+/* body {
+	min-width: 320px;
+	position: relative;
+} */
+
+.aside-container {
+	margin: 0 24px;
+	z-index: 10;
+	position: sticky;
+	top: 0;
+}
+
+.aside {
+	min-height: 100vh;
+	font-size: 16px;
+	font-weight: 500;
+	max-width: 320px;
+	background-color: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+	-moz-box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+	box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+}
+
+aside .header {
+	border-bottom: 1px solid #d9fff5;
+}
+
+.languages {
+	text-transform: uppercase;
+	display: flex;
+	gap: 7px;
+	align-items: flex-start;
+}
+
+.languages__item {
+	color: rgba(27, 28, 33, 1);
+	line-height: 24px;
+	transition: 0.3s;
+}
+.languages__item:hover {
+	opacity: 0.8;
+}
+
+.languages__item--active {
+	color: rgba(126, 126, 130, 1);
+}
+
+.aside-header {
+	padding-top: 18px;
+	margin-bottom: 46px;
+	display: flex;
+	justify-content: space-between;
+}
+.aside-header__burger-btn {
+	display: none;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.aside-nav__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	margin-bottom: 268px;
+}
+.aside-nav__item {
+	position: relative;
+}
+.aside-nav__link {
+	color: rgba(27, 28, 33, 1);
+	display: block;
+	transition: all 1s;
+}
+.aside-nav__link::before {
+	transition: all 1s;
+}
+.aside-nav__link::after {
+	transition: all 1s;
+}
+.aside-nav__link:active {
+	opacity: 0.7;
+}
+.aside-nav__link:hover {
+	color: rgba(126, 126, 130, 1);
+}
+.aside-nav__link--active {
+	color: rgba(126, 126, 130, 1);
+}
+
+.aside-nav__link:hover::after {
+	content: '';
+	border-radius: 4px;
+	width: 6px;
+	height: 32px;
+	background-color: rgba(255, 62, 121, 1);
+	position: absolute;
+	left: -26px;
+	top: -9px;
+	display: block;
+}
+
+.aside-nav__link--active::before {
+	content: '';
+	border-radius: 4px;
+	width: 6px;
+	height: 32px;
+	background-color: aqua;
+	position: absolute;
+	left: -26px;
+	top: -9px;
+}
+.mail {
+	transition: 0.3s;
+}
+.mail:hover {
+	opacity: 0.8;
+}
+.phone {
+	font-size: 24px;
+	display: block;
+	padding-top: 18px;
+	margin-bottom: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.phone:hover {
+	opacity: 0.8;
+}
+/* Этот блока кода удалить так как он будет в основном CSS */
+.aside-header__contact {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+.svg {
+	width: 40px;
+	height: 40px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.svg:hover {
+	opacity: 0.8;
+}
+.header_menu-btn {
+	background-color: transparent;
+	border-width: 0;
+}
+.menu-svg {
+	background-image: url(../images/header/menu.svg);
+}
+.burger-svg {
+	background-image: url(../images/aside/burger.svg);
+	display: none;
+}
+
+.call-svg {
+	background-image: url(../images/header/call.svg);
+}
+.chat-svg {
+	background-image: url(../images/header/chat.svg);
+}
+.profile-svg {
+	background-image: url(../images/header/profile.svg);
+}
+.repair-svg {
+	background-image: url(../images/header/repair.svg);
+}
+.checkout-svg {
+	background-image: url(../images/header/checkstatus.svg);
+}
+.search-svg {
+	background-image: url('../images/aside/search.svg');
+}
+@media (max-width: 768px) {
+	.burger-svg {
+		display: block;
+	}
+	.logo {
+		padding-left: 16px;
+	}
+}
+@media (max-width: 1440px) {
+	.aside-header__burger-btn {
+		display: block;
+	}
+}
