@@ -54,6 +54,22 @@ button {
 button:hover {
 	opacity: 0.8;
 }
+
+#blurBackgroundModal,
+#blurBackgroundSideBar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+	z-index: 14;
+	filter: grayscale(80%);
+}
+#blurBackgroundSideBar {
+	z-index: 12;
+}
 .header__inner {
 	display: flex;
 	gap: 8px;
@@ -140,10 +156,12 @@ button:hover {
 	background-image: url(../images/header/chat.svg);
 }
 .profile-svg {
+	margin-right: 8px;
 	background-image: url(../images/header/profile.svg);
 }
 .repair-svg {
 	background-image: url(../images/header/repair.svg);
+	margin-left: 8px;
 }
 .checkout-svg {
 	background-image: url(../images/header/checkstatus.svg);
@@ -207,11 +225,11 @@ button:hover {
 	border: 2px solid #b8ffec;
 	background-color: #fff;
 }
-n__img {
+/* .main__img {
 	padding-bottom: 40px;
 	transform: translateX(-16px);
 	width: 100vw;
-}
+} */
 
 .header__support {
 	display: flex;
@@ -320,6 +338,9 @@ p.main__text-hidden {
 }
 
 @media (min-width: 768px) {
+	body {
+		overflow-x: visible;
+	}
 	.container .main__img {
 		position: relative;
 	}
@@ -382,13 +403,17 @@ p.main__text-hidden {
 		overflow-y: hidden;
 	}
 }
-
+/* .modal-call {
+	display: block;
+} */
 @media (min-width: 1120px) {
 	body {
 		display: flex;
 		justify-content: center;
 	}
-
+	.logo {
+		padding-left: 0px;
+	}
 	.wrapper {
 		max-width: 1120px;
 		position: relative;

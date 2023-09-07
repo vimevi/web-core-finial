@@ -125,6 +125,7 @@
   margin-bottom: 1em;
 }
 .prices__feedback {
+  width: 192px;
   color: #1b1c21;
   font-size: 16px;
   font-weight: 500;
@@ -132,7 +133,6 @@
   cursor: pointer;
   transition: opacity 0.3s;
   display: block;
-  width: 320px;
 }
 .prices__feedback::after {
   content: '';
@@ -141,8 +141,8 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
-  top: 6px;
-  right: 4px;
+  bottom: 4px;
+  right: 70px;
   width: 6px;
   height: 10px;
 }
@@ -202,12 +202,23 @@
   .prices__service-price {
     margin-left: 8px;
   }
+  .prices__feedback::after {
+    content: '';
+    top: 6px;
+    right: -1px;
+  }
+  .prices__feedback:hover {
+    opacity: 0.7;
+  }
   .prices__service-btn {
     position: static;
   }
   .prices__service-btn::after {
     top: 27px;
     right: 28px;
+  }
+  .prices__feedback {
+    width: 320px;
   }
   .prices__item {
     background-color: white;
@@ -235,9 +246,6 @@
   .prices__servie-name {
     grid-column: 1;
     /* Размещаем в первом столбце */
-  }
-  .prices__feedback {
-    width: 192px;
   }
   .prices__service-price {
     text-align: left;

@@ -11,14 +11,21 @@ input:focus::placeholder,
 textarea:focus::placeholder {
 	color: transparent; /* Устанавливаем прозрачный цвет плейсхолдера */
 }
-.modal-feedback {
+.modal-feedback,
+.modal-call {
 	font-size: 14px;
 	line-height: 16px;
 	display: none;
+	z-index: 15;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	min-height: 100vh;
 	&__wrapper {
 		max-height: 100vh;
 	}
 	&__form {
+		z-index: 14;
 		padding: 40px 32px;
 		display: flex;
 		flex-direction: column;
@@ -50,7 +57,7 @@ textarea:focus::placeholder {
 		}
 	}
 	&__title {
-		padding-top: 60px;
+		padding-top: 30px;
 		font-weight: 900;
 		font-size: 24px;
 		line-height: 32px;
@@ -61,7 +68,7 @@ textarea:focus::placeholder {
 		background-image: url(../images/aside/close.svg);
 		width: 40px;
 		height: 40px;
-		z-index: 100;
+		z-index: 15;
 	}
 	&__warning {
 		margin-bottom: 20px;
@@ -110,8 +117,9 @@ textarea:focus::placeholder {
 }
 
 @media (min-width: 768px) {
-	.modal-feedback {
-		z-index: 100;
+	.modal-feedback,
+	.modal-call {
+		z-index: 15;
 		position: absolute;
 		right: 0;
 		background-color: rgba(255, 255, 255, 1);
@@ -156,7 +164,8 @@ textarea:focus::placeholder {
 	}
 }
 @media (min-width: 1120px) {
-	.modal-feedback {
+	.modal-feedback,
+	.modal-call {
 		margin-left: auto;
 	}
 }

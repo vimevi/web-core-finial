@@ -11,74 +11,78 @@
 </head>
 
 <body>
-	<aside class="aside">
-		<div class="aside-container">
-			<header class="aside-header">
-				<button class="aside-header__burger-btn">
-					<div class="burger-svg svg"></div>
-				</button>
-				<a class="logo" href="#"> <img class="logo__img" src="images/header/logo.svg" alt="logo"> </a>
-				<button class="search-btn" href="#">
-				</button>
-				<button class="aside-header__search-btn">
-					<div class="search-svg svg"></div>
-				</button>
-			</header>
-			<nav class="aside-nav">
-				<ul class="aside-nav__inner">
-					<li class="aside-nav__item">
-						<a class="aside-nav__link aside-nav__link--active" href="">Ремонт техники</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Услуги и сервисы</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Корпоративным клиентам</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Продавцам техники</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Партнерам</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Производителям</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Наши сервисные центры</a>
-					</li>
-					<li class="aside-nav__item">
-						<a class="aside-nav__link" href="">Контакты</a>
-					</li>
 
-				</ul>
+	<div class="aside-wrapper">
+		<aside class="aside">
+			<div class="aside-container">
+				<header class="aside-header">
+					<button class="aside-header__burger-btn">
+						<div class="burger-svg svg"></div>
+					</button>
+					<a class="logo" href="#"> <img class="logo__img" src="images/header/logo.svg" alt="logo"> </a>
+					<button class="search-btn" href="#">
+					</button>
+					<button class="aside-header__search-btn">
+						<div class="search-svg svg"></div>
+					</button>
+				</header>
+				<nav class="aside-nav">
+					<ul class="aside-nav__inner">
+						<li class="aside-nav__item">
+							<a class="aside-nav__link aside-nav__link--active" href="">Ремонт техники</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Услуги и сервисы</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Корпоративным клиентам</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Продавцам техники</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Партнерам</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Производителям</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Наши сервисные центры</a>
+						</li>
+						<li class="aside-nav__item">
+							<a class="aside-nav__link" href="">Контакты</a>
+						</li>
 
-			</nav>
-			<nav class="aside-header__contact">
-				<a class="aside-header__contact-item" href="tel:88008908900">
-					<div class="call-svg svg"></div>
-				</a>
-				<button class="aside-header__contact-item" id="showModalFeedback">
-					<div class="chat-svg svg"></div>
-				</button>
-				<a class="aside-header__contact-item" href="">
-					<div class="profile-svg svg"></div>
-				</a>
-			</nav>
-			<section class="contacts">
+					</ul>
 
-				<div class="contacts__inner">
-					<a class="mail" href="mailto:mail@cps.com">mail@cps.com</a>
-					<a class="phone" href="tel:88008908900">8 800 890 8900</a>
-				</div>
-			</section>
-			<section class="languages">
-				<a class="languages__item languages__item--active" href="">ru</a>
-				<a class="languages__item" href="">en</a>
-				<a class="languages__item" href="">ch</a>
-			</section>
-		</div>
-	</aside>
+				</nav>
+				<nav class="aside-header__contact">
+					<button class="aside-header__contact-item" id="showModalCall" href="tel:88008908900">
+						<div class="call-svg svg"></div>
+					</button>
+					<button class="aside-header__contact-item" id="showModalFeedback">
+						<div class="chat-svg svg"></div>
+					</button>
+					<a class="aside-header__contact-item" href="">
+						<div class="profile-svg svg"></div>
+					</a>
+				</nav>
+				<section class="contacts">
+
+					<div class="contacts__inner">
+						<a class="mail" href="mailto:mail@cps.com">mail@cps.com</a>
+						<a class="phone" href="tel:88008908900">8 800 890 8900</a>
+					</div>
+				</section>
+				<section class="languages">
+					<a class="languages__item languages__item--active" href="">ru</a>
+					<a class="languages__item" href="">en</a>
+					<a class="languages__item" href="">ch</a>
+				</section>
+			</div>
+		</aside>
+	</div>
+
 	<section class="modal-feedback" id="modal-feedback">
 		<div class="modal-feedback__wrapper">
 			<form class="modal-feedback__form" action="#" method="post">
@@ -97,6 +101,22 @@
 			</form>
 		</div>
 	</section>
+	<section class="modal-call">
+		<div class="modal-call__wrapper">
+			<form class="modal-call__form" action="#" method="post">
+				<button class="modal-call__burger"></button>
+				<h4 class="modal-call__title line">Заказать звонок</h4>
+				<input class="modal-call__one-line" placeholder="Телефон" type="phone" name="call" id="call">
+				<p class="modal-call__warning warning">Нажимая “отправить”, вы даете согласие на <a href="#"> обработку
+						персональных
+						данных</a> и соглашаетесь с нашей <a href="#">политикой
+						конфиденциальности</a></p>
+				<input class="modal-call__btn" type="submit" value="ОТПРАВИТЬ">
+			</form>
+		</div>
+	</section>
+	<div id="blurBackgroundModal"></div>
+	<div id="blurBackgroundSideBar"></div>
 
 	<div class="wrapper">
 		<header class="header">
@@ -176,12 +196,9 @@
 							родным
 							и
 							близким.</p>
-						<p class="main__more-text--size-m main__text-hidden main__text">Наш опытный коллектив специалистов и
-							высокий профессионализм
-							позволяют нам успешно адаптироваться к изменениям в сфере и
-							оставаться на передовых позициях. Мы тщательно следим за развитием технологий и методик, чтобы
-							предоставлять нашим
-							клиентам самые современные и эффективные решения. </p>
+						<p class="main__more-text--size-m main__text-hidden main__text">Наш опытный
+							коллектив специалистов и профессионализм
+							позволяют нам делать это долгие годы. </p>
 						<button class="more-btn-text">
 							<span>Читать далее</span>
 						</button>
@@ -427,6 +444,7 @@
 	<script src="js/swiper-config.js"></script>
 	<script src="js/show-modal.js"></script>
 	<script src="js/listener-for-second-swiper.js"></script>
+	<script src="js/show-side-bar.js"></script>
 </body>
 
 </html>
