@@ -45,7 +45,7 @@ moreBtn.addEventListener('click', () => {
 		// Если список был развернут, сворачиваем его
 		array.forEach((el) => el.classList.remove('is-visible'));
 		textMore.textContent = 'Показать все'; // Обновляем текст кнопки
-		moreBtn.classList.remove('expanded');
+		// moreBtn.classList.remove('expanded');
 		isExpanded = false;
 	} else {
 		// Если список был свернут, разворачиваем его
@@ -53,7 +53,7 @@ moreBtn.addEventListener('click', () => {
 		const visItems = array.slice(0, items);
 		visItems.forEach((el) => el.classList.add('is-visible'));
 		textMore.textContent = 'Скрыть'; // Обновляем текст кнопки
-		moreBtn.classList.add('expanded');
+		// moreBtn.classList.add('expanded');
 		isExpanded = true;
 	}
 });

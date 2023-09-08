@@ -76,9 +76,9 @@ $top-color: rgba(248, 248, 248, 1);
 			&:nth-child(n + 4) {
 				display: none;
 			}
-			.is-visible {
-				display: flex;
-			}
+		}
+		&__item.is-visible {
+			display: flex;
 		}
 	}
 	.swiper {
