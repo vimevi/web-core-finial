@@ -10,12 +10,11 @@
 // 					el: '.swiper-pagination',
 // 					clickable: true,
 // 				},
-// 				autoplay: { delay: 6000 },
+// 				// autoplay: { delay: 6000 },
 // 				keyboard: {
 // 					enabled: true,
 // 					onlyInViewport: true,
 // 				},
-// 				loop: true,
 // 				speed: 400,
 // 				slideToClickedSlide: true,
 // 				spaceBetween: 16,
@@ -23,7 +22,8 @@
 // 			});
 // 		}
 // 	} else if (init) {
-// 		swiper.destroy();
+// 		swiper.slideTo(0); // Устанавливаем активный слайд с индексом 0 при ресайзе
+// 	} else {
 // 		init = false;
 // 	}
 // }
@@ -74,6 +74,5 @@ function swiperCard() {
 		init = false;
 	}
 }
-
 swiperCard();
 window.addEventListener('resize', swiperCard);

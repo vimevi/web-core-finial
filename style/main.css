@@ -31,6 +31,7 @@ html {
 	font-family: TT Lakes;
 	min-width: 320px;
 	overflow-x: hidden;
+	position: relative; /* Данное правило добавлено для того чтобы блюр работал по всей высоте  */
 }
 /* .outside-wrapper {
 	display: flex;
@@ -268,11 +269,6 @@ button:hover {
 .main__more-text--size-m {
 	display: none;
 }
-p.main__text-hidden {
-	display: none;
-	transition: all 0.3s;
-	transition: opacity 0.3s ease, height 0.3s ease;
-}
 
 .more-btn-text {
 	border: 1px solid transparent;
@@ -320,20 +316,23 @@ p.main__text-hidden {
 	font-size: 14px;
 	color: #1b1c21;
 	letter-spacing: 0.2px;
+	margin-bottom: 1em;
 }
-
+.more-btn-text---rotate span::before {
+	transform: rotate(180deg);
+}
 .main__picture {
 	width: 100%;
 	height: 100%;
 }
-
+.main__text-visible {
+	display: block;
+}
 @media (max-width: 1440px) {
 	aside {
 		display: none;
-		z-index: 10;
 	}
 	body {
-		position: relative;
 	}
 }
 
@@ -378,6 +377,7 @@ p.main__text-hidden {
 
 	.main__info {
 		display: flex;
+		align-items: flex-start;
 		padding: 32px 24px 30px 24px;
 		margin: 0;
 	}
@@ -401,6 +401,9 @@ p.main__text-hidden {
 		display: block;
 		max-height: 4em;
 		overflow-y: hidden;
+	}
+	.main__more-text--size-m:last-of-type {
+		max-height: auto;
 	}
 }
 /* .modal-call {
@@ -495,8 +498,8 @@ p.main__text-hidden {
 	.main__info {
 		justify-content: space-between;
 	}
-	.main__more-text--size-m {
-		max-height: none;
+	.main__text-visible {
+		display: block;
 	}
 	@media (min-width: 1440px) {
 		body {

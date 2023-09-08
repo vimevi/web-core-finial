@@ -46,22 +46,10 @@ $top-color: rgba(248, 248, 248, 1);
 		display: none;
 	}
 	.swiper {
-		height: 240px;
 	}
 }
 .devices span {
 	text-align: start;
-}
-.title {
-	&__wrapper {
-	}
-}
-
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }
 
 @media (min-width: 768px) {
@@ -81,15 +69,15 @@ $top-color: rgba(248, 248, 248, 1);
 		}
 		.more-btn {
 			display: block;
-			transform: translate(16px, -32px);
+			transform: translate(16px, -22px);
 			z-index: 10;
 		}
 		&__item {
-			.is-visible {
-				display: flex;
-			}
 			&:nth-child(n + 4) {
 				display: none;
+			}
+			.is-visible {
+				display: flex;
 			}
 		}
 	}
@@ -118,6 +106,9 @@ $top-color: rgba(248, 248, 248, 1);
 			&:nth-child(n + 5) {
 				display: none;
 			}
+		}
+		.is-visible {
+			display: block;
 		}
 	}
 }

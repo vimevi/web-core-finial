@@ -1,20 +1,33 @@
-const extraText = document.querySelector('.main__text-hidden');
-const moreBtnText = document.querySelector('.more-btn-text');
-const textContentBtn = moreBtnText.querySelector('span');
-const theSecondParagraph = document.querySelector(
-	'main__more-text--size-m:last-child'
-);
+const paragraphContainer = document.querySelector('.main__info-wrapper');
+const paragraphs = paragraphContainer.querySelectorAll('.main__text');
+const showMoreButton = paragraphContainer.querySelector('.more-btn-text');
+const spanMoreButton = showMoreButton.querySelector('span');
 
-// Обработчик событий "Читать далее" с текстом
+let isExpandedText = false;
+for (let i = 1; i < paragraphs.length; i++) {
+	paragraphs[i].style.display = 'none';
+}
 
-moreBtnText.addEventListener('click', function () {
-	extraText.classList.toggle('main__text-hidden');
-	moreBtnText.classList.toggle('more-btn-text---rotate');
-	if (textContentBtn.textContent === 'Читать далее') {
-		textContentBtn.textContent = 'Скрыть';
-	} else {
-		textContentBtn.textContent = 'Читать далее';
+showMoreButton.addEventListener('click', function () {
+	for (let i = 1; i < paragraphs.length; i++) {
+		if (!isExpandedText) {
+			paragraphs[i].style.display = 'block';
+		} else {
+			paragraphs[i].style.display = 'none';
+		}
 	}
+
+	isExpandedText = !isExpandedText;
+
+	if (isExpandedText) {
+		spanMoreButton.textContent = 'Скрыть';
+	} else {
+		spanMoreButton.textContent = 'Показать ещё';
+	}
+});
+showMoreButton.addEventListener('click', function () {
+	showMoreButton.classList.toggle('more-btn---rotate');
+	console.log('Данная строка выполняется, стрека перевенулась');
 });
 
 const moreBtn = document.querySelector('.more-btn');

@@ -1,28 +1,29 @@
-const moreBtnDevices = document.querySelector('.more-btn-devices');
+const moreBtnDevices = document.querySelector('.devices .more-btn');
 const textMoreDevices = moreBtnDevices.querySelector('span');
 const btnArrowDevices = moreBtnDevices.querySelector('span::before');
 
-let itemsDevices = 6;
+let itemsDevices = 4;
 let isExpandedDevices = false; // Переменная для отслеживания состояния списка
 
 moreBtnDevices.addEventListener('click', () => {
-	const arrayDevices = Array.from(
-		document.querySelector('.devices__items').children
-	);
+	const array = Array.from(document.querySelector('.devices__items').children);
 
 	if (isExpandedDevices) {
 		// Если список был развернут, сворачиваем его
-		arrayDevices.forEach((el) => el.classList.remove('is-visible'));
-		textMoreDevices.textContent = 'Показать все'; // Обновляем текст кнопки
-		moreBtnDevices.classList.remove('expanded');
+		array.forEach((el) => el.classList.remove('is-visible'));
+		textContentBtn.textContent = 'Скрыть';
+
 		isExpandedDevices = false;
 	} else {
 		// Если список был свернут, разворачиваем его
-		itemsDevices += 5;
-		const visItemsDevices = arrayDevices.slice(0, itemsDevices);
-		visItemsDevices.forEach((el) => el.classList.add('is-visible'));
-		textMoreDevices.textContent = 'Скрыть'; // Обновляем текст кнопки
-		moreBtnDevices.classList.add('expanded');
+		items += 5;
+		const visItems = array.slice(0, items);
+		visItems.forEach((el) => el.classList.add('is-visible'));
+
 		isExpandedDevices = true;
 	}
+});
+// Обработчик событий для стрелки в кнопке
+moreBtnDevices.addEventListener('click', function () {
+	moreBtn.classList.toggle('more-btn---rotate');
 });
