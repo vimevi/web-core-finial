@@ -40,12 +40,18 @@
 .devices .more-btn {
   display: none;
 }
+.devices .swiper {
+  height: 250px;
+}
 
 .devices span {
   text-align: start;
 }
 
 @media (min-width: 768px) {
+  .devices .swiper {
+    height: auto;
+  }
   .devices__wrapper {
     padding: 24px 12px;
   }
@@ -57,6 +63,9 @@
   .devices__item, .devices__link {
     width: 224px;
   }
+  .devices__btn-wrapper {
+    height: 30px;
+  }
   .devices .more-btn {
     display: block;
     transform: translate(16px, -22px);
@@ -67,10 +76,6 @@
   }
   .devices__item.is-visible {
     display: flex;
-  }
-
-  .swiper {
-    height: auto;
   }
 
   .swiper-slide {

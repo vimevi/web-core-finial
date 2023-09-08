@@ -46,6 +46,7 @@ $top-color: rgba(248, 248, 248, 1);
 		display: none;
 	}
 	.swiper {
+		height: 250px;
 	}
 }
 .devices span {
@@ -54,6 +55,9 @@ $top-color: rgba(248, 248, 248, 1);
 
 @media (min-width: 768px) {
 	.devices {
+		.swiper {
+			height: auto;
+		}
 		&__wrapper {
 			padding: 24px 12px;
 		}
@@ -66,6 +70,9 @@ $top-color: rgba(248, 248, 248, 1);
 		&__item,
 		&__link {
 			width: 224px;
+		}
+		&__btn-wrapper {
+			height: 30px;
 		}
 		.more-btn {
 			display: block;
@@ -81,9 +88,7 @@ $top-color: rgba(248, 248, 248, 1);
 			display: flex;
 		}
 	}
-	.swiper {
-		height: auto;
-	}
+
 	.swiper-slide {
 		margin-bottom: 24px;
 	}
